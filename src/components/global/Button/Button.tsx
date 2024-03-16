@@ -6,17 +6,18 @@ type ButtonProps = {
     icon?: any;
     iconPosition?: 'left' | 'right';
     variant: string;
-    onClick: any;
+    onClick?: any;
+    full?: boolean;
 };
 
-const Button = ({ type, title, icon, iconPosition, variant, onClick }: ButtonProps) => {
+const Button = ({ type, title, icon, iconPosition, variant, full, onClick }: ButtonProps) => {
     return (
         <button
             type={type}
-            className={`flexCenter gap-3 rounded-full ${variant}`}
+            className={`flexCenter gap-3 rounded-full ${variant} ${full && 'w-full'}`}
             onClick={onClick}
         >
-            {iconPosition === 'left' && icon} <span className="bold-16 whitespace-nowrap">{title}</span> {iconPosition === 'right' && icon}
+            {iconPosition === 'left' && icon} <span className="bold-16 whitespace-nowrap cursor-pointer">{title}</span> {iconPosition === 'right' && icon}
         </button>
     );
 };

@@ -8,7 +8,7 @@ import Image from "next/image";
 const SectionCTA = () => {
     return (
         <section className="flexCenter w-full flex-col pb-[100px]" id="cta">
-            <div className={styles.get_app}>
+            <div className={`max-container ${styles.get_app}`}>
                 <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
                     <h2 className="capitalize bold-40 lg:bold-64 xl:max-w-[400px]">Get for free now!</h2>
                     <p className="regular-16 text-gray-10">Available on Android and IOS</p>
